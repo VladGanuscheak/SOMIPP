@@ -16,10 +16,7 @@ mov ah, 0eh
 start_loop:
 int 10h
 
-push ax
-mov al, 9
-int 10h
-pop ax
+call InFormOfTable
  
 inc al
 
@@ -30,6 +27,13 @@ end_loop:
 
 ret
 
-
+InFormOfTable:
+   push ax
+    mov al, 32
+    int 10h
+    int 10h
+    int 10h
+    pop ax
+ret
 
 
