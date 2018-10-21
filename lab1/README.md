@@ -103,7 +103,7 @@ Here I didn't use the loop. That's why I used Short Jump if first operand is Equ
 In case if ```al``` is equal to zero I'll go out of the 'while loop'.
 
 The ```STR1``` string was displayed not only by ```int 10h/0eh```, but also with help of other interrupts: 
-[SOMMIP/displaying_strings.asm](https://github.com/VladGanuscheak/SOMIPP/blob/master/displaying_strings.asm#L9)
+[SOMMIP/displaying_strings.asm](https://github.com/VladGanuscheak/SOMIPP/blob/master/lab1/displaying_strings.asm)
 
 The easiest way to print the string is the following:
 
@@ -157,7 +157,7 @@ Three times is printed symbol which has index ```32``` in ASCII table (space).
 
 3 spaces between two ASCII symbols guaranties the form of table on the screen, because 80 (the width of the screen) divides without rest on 4.
 
-All the code of this task: ![ASCII_table](http://lol.ru)
+All the code of this task: [ASCII_table](https://github.com/VladGanuscheak/SOMIPP/blob/master/lab1/ascii_code.asm)
 
 ## Task #3
 
@@ -198,6 +198,6 @@ the ```str_ShowRegisters``` is the string which consists of all values of the re
 the ```str_ShowRegisters_end``` determines the end of the string and it is used to determine the length of the string (other way was to create zero-byte terminated string).
 
 The ```PrintRegistersProcedure``` is devided into some logical parts: 
-![SOMIPP/print_registers.asm](https://github.com/VladGanuscheak/SOMIPP/blob/master/print_registers.asm)
+[SOMIPP/print_registers.asm](https://github.com/VladGanuscheak/SOMIPP/blob/master/lab1/print_registers.asm)
 
 The stack has property to give the last element when we pop it, so to set all the register properly we should mention that the ```bx``` in our case starts at ```DI:000h```. The following solution fixes this problem: use of the ```WriteInTheRegisterProcedure``` functionality and after subtracting 10 from ```bx```.
