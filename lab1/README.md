@@ -170,13 +170,13 @@ To print the current state of all registers.
 To be clear the code I have define all the constants:
 
 ```javascript
-    axRegister equ 0BAFh
-    cxRegister equ 0CABh
-    dxRegister equ 0FAECh
-    bxRegister equ 0ABCEh
-    bpRegister equ 0CEFAh
-    siRegister equ 0FAC3h
-    diRegister equ 0AFBCh
+    axRegister equ 09EFh
+    cxRegister equ 0CACh
+    dxRegister equ 0DDECh
+	bxRegister equ 0AACEh
+	bpRegister equ 00EFAh
+	siRegister equ 0F0C3h
+	diRegister equ 000BCh
 
     newLine equ 0Dh, 0Ah
 
